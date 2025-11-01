@@ -1,0 +1,196 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./app/components/Header.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.Header_header__xuTiO {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 1.5rem 2rem;
+}
+
+.Header_container__qRqis {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header_logoContainer__3zN4G {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.Header_logoText__CW1Mz {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.Header_ctaButton__Ye_oe {
+  background-color: var(--primary-lime);
+  color: black;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Header_ctaButton__Ye_oe:hover {
+  transform: scale(1.05);
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./app/components/Footer.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.Footer_footer__0IXn3 {
+  padding: 3rem 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.Footer_container__6pNfo {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.Footer_copyright__t4WoK {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--light-gray);
+}
+
+.Footer_links__sNoYT {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.Footer_links__sNoYT a {
+  color: var(--light-gray);
+  transition: color 0.2s ease;
+}
+
+.Footer_links__sNoYT a:hover {
+  color: var(--primary-lime);
+}
+
+@media (max-width: 768px) {
+  .Footer_container__6pNfo {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[5].use[3]!./app/components/Hero.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
+.Hero_heroSection__L3x6Z {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.Hero_glow1__5JMvz, .Hero_glow2__7AnU0 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(191, 255, 0, 0.05);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: Hero_pulse__pgcim 4s infinite ease-in-out;
+}
+.Hero_glow1__5JMvz { top: 15%; left: 15%; }
+.Hero_glow2__7AnU0 { bottom: 15%; right: 15%; animation-delay: 2s; }
+
+.Hero_content___NoHb {
+  z-index: 1;
+  animation: Hero_fadeInUp__XYT_k 0.8s ease-out forwards;
+}
+
+.Hero_badge__RiPir {
+  display: inline-block;
+  background-color: rgba(191, 255, 0, 0.1);
+  border: 1px solid rgba(191, 255, 0, 0.3);
+  color: var(--primary-lime);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.Hero_mainHeading__oKwIu {
+  font-size: clamp(2.5rem, 8vw, 4rem); /* Responsive font size */
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.Hero_glowText__Dfc4S {
+  color: var(--primary-lime);
+  animation: Hero_glow__2sQqe 2s ease-in-out infinite alternate;
+}
+
+.Hero_subheading__23MoM {
+  margin-top: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
+  color: var(--light-gray);
+  line-height: 1.6;
+}
+
+.Hero_terminal__8A9Tm {
+  margin-top: 2rem;
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  border: 1px solid var(--border-color);
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+.Hero_prompt__5rjfG { color: var(--primary-lime); margin-right: 0.5rem; }
+.Hero_cursor__Afu1c {
+  display: inline-block;
+  width: 8px;
+  height: 1.2rem;
+  background-color: var(--primary-lime);
+  animation: Hero_pulse__pgcim 1s infinite;
+  margin-left: 0.25rem;
+}
+
+.Hero_heroCta__ETvuF {
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: var(--primary-lime);
+  color: black;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 0 20px rgba(191, 255, 0, 0.2);
+}
+
+.Hero_heroCta__ETvuF:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(191, 255, 0, 0.4);
+}

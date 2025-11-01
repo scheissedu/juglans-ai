@@ -1,0 +1,105 @@
+.heroSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow1, .glow2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(191, 255, 0, 0.05);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: pulse 4s infinite ease-in-out;
+}
+.glow1 { top: 15%; left: 15%; }
+.glow2 { bottom: 15%; right: 15%; animation-delay: 2s; }
+
+.content {
+  z-index: 1;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(191, 255, 0, 0.1);
+  border: 1px solid rgba(191, 255, 0, 0.3);
+  color: var(--primary-lime);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+}
+
+.mainHeading {
+  font-size: clamp(2.5rem, 8vw, 4rem); /* Responsive font size */
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.glowText {
+  color: var(--primary-lime);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.subheading {
+  margin-top: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.125rem;
+  color: var(--light-gray);
+  line-height: 1.6;
+}
+
+.terminal {
+  margin-top: 2rem;
+  font-family: monospace;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  border: 1px solid var(--border-color);
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+.prompt { color: var(--primary-lime); margin-right: 0.5rem; }
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.2rem;
+  background-color: var(--primary-lime);
+  animation: pulse 1s infinite;
+  margin-left: 0.25rem;
+}
+
+.heroCta {
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: var(--primary-lime);
+  color: black;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 0 20px rgba(191, 255, 0, 0.2);
+}
+
+.heroCta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(191, 255, 0, 0.4);
+}
