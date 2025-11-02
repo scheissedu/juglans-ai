@@ -6,16 +6,19 @@ import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import LegalPageLayout from "@/app/components/LegalPageLayout";
 
-export async function generateMetadata({ params: { lang } }: { params: { lang: Locale } }): Promise<Metadata> {
+// ==================== 修改 #1: generateMetadata ====================
+export async function generateMetadata({ params }: { params: Promise<{ lang: Locale }> }): Promise<Metadata> {
+  const { lang } = await params; // <-- 使用 await 解析
   const dictionary = await getDictionary(lang);
   return {
     title: dictionary.privacyPage.title,
-    // Optional: Add a description for better SEO
     description: `Read the privacy policy for Juglans.ai. Understand how we collect, use, and protect your data.`,
   };
 }
 
-export default async function PrivacyPolicyPage({ params: { lang } }: { params: { lang: Locale } }) {
+// ==================== 修改 #2: Page Component ====================
+export default async function PrivacyPolicyPage({ params }: { params: Promise<{ lang: Locale }> }) {
+  const { lang } = await params; // <-- 使用 await 解析
   const dictionary = await getDictionary(lang);
   const pageT = dictionary.privacyPage;
 
