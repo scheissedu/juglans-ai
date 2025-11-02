@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "title": "Juglans | The World's First Vibe Trading App",
+    "description": "Juglans is the world's first Vibe Trading app, enabling you to make investment decisions through natural language. Say goodbye to complex charts, just ask."
+  },
+  "header": {
+    "nav": {
+      "whatIsVibeTrading": "What is Vibe Trading",
+      "products": "Products",
+      "company": "Company",
+      "learn": "Learn",
+      "support": "Support"
+    },
+    "launchApp": "Launch App"
+  },
+  "hero": {
+    "badge": "The World's First Vibe Trading App",
+    "title_line1": "The Future of Trading",
+    "title_line2": "Just Ask",
+    "subtitle": "Juglans empowers your investment decisions with natural language. Say goodbye to complex charts and talk to your personal AI trader.",
+    "cta": "Experience Now →",
+    "terminalCommands": [
+      "Find tech stocks hitting 52-week lows...",
+      "Compare NVDA and AMD's P/E ratios...",
+      "What's the market sentiment on crypto today?",
+      "Show me ESG funds with high returns..."
+    ]
+  },
+  "features": {
+    "title": "Juglans AI: Your Intuitive Crypto Co-Pilot",
+    "subtitle": "Unleash the power of professional trading without the complexity. Juglans AI transforms your trading experience by turning natural conversation into intelligent action.",
+    "cards": {
+      "conversational": {
+        "title": "Conversational Trading & Analysis",
+        "description": "Forget complicated menus. Just tell the AI what you want in plain English, like \"Are there any bullish patterns on ETH?\""
+      },
+      "visualized": {
+        "title": "Visualized AI Strategies",
+        "description": "AI isn't a black box. Every suggestion and analysis is drawn directly on your chart. See exactly what the AI is thinking."
+      },
+      "scanner": {
+        "title": "Proactive Market Scanner",
+        "description": "Our AI acts as your personal analyst, constantly scanning for opportunities based on your criteria, like assets with surging volume."
+      },
+      "automated": {
+        "title": "Automated Technical Analysis",
+        "description": "Let the AI handle the heavy lifting. It automatically identifies patterns, draws support/resistance levels, and interprets indicators."
+      },
+      "planFirst": {
+        "title": "Plan First, Trade Second",
+        "description": "Every idea becomes a visual plan with entry, stop-loss, and take-profit targets. You are the pilot; the AI is your co-pilot."
+      },
+      "mentor": {
+        "title": "Built-In Trading Mentor",
+        "description": "New to trading? Ask the AI to explain any trading term, pattern, or indicator. Learn by doing with an expert guide."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works: Sense, Think, Act",
+    "subtitle": "Juglans AI combines a state-of-the-art charting engine with a powerful Large Language Model (LLM) to create a seamless, context-aware trading assistant.",
+    "pillars": {
+      "sense": {
+        "title": "1. Sense: Comprehensive Context Awareness",
+        "description": "The AI gathers a complete picture of the market and your personal context, understanding the chart, timeframe, and even your portfolio status."
+      },
+      "think": {
+        "title": "2. Think: Intelligent Analysis & Strategy",
+        "description": "Using a leading LLM, the AI processes your request, selects the right tool, and formulates a complete trading plan with calculated risk."
+      },
+      "act": {
+        "title": "3. Act: Visual Execution & Confirmation",
+        "description": "The AI's output is rendered visually on your chart. You can interact with the plan and have the final say before any trade is executed."
+      }
+    }
+  },
+  "vibeTradingPage": {
+    "hero": {
+      "title": "What is Vibe Trading?",
+      "subtitle": "It's trading based on your intuition, powered by AI. No complex charts, no confusing jargon. Just your ideas, turned into intelligent action."
+    },
+    "coreConcept": {
+      "title": "From Confusion to Clarity",
+      "problem": {
+        "title": "The Old Way: Overwhelming & Anxious",
+        "points": [
+          "Endless charts and indicators to learn.",
+          "Fear of missing out (FOMO) drives impulsive decisions.",
+          "Information overload leads to analysis paralysis.",
+          "Requires significant time and technical expertise."
+        ]
+      },
+      "solution": {
+        "title": "The Juglans Way: Intuitive & Confident",
+        "points": [
+          "Speak your thoughts in plain English.",
+          "AI translates your 'vibe' into a clear, visual plan.",
+          "Data-driven insights support your intuition.",
+          "You remain in control, making the final, informed decision."
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to Trade with Your Vibe?",
+      "button": "Launch the App"
+    }
+  },
+  "footer": {
+    "copyright": "Juglans.ai. All rights reserved.",
+    "links": {
+      "linkedin": "LinkedIn",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: October 26, 2023",
+    "content": [
+      {
+        "heading": "1. Introduction",
+        "text": "Welcome to Juglans.ai. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website or use our services."
+      },
+      {
+        "heading": "2. Information We Collect",
+        "text": "We may collect, use, store and transfer different kinds of personal data about you which we have grouped together as follows: Identity Data, Contact Data, Technical Data, and Usage Data."
+      },
+      {
+        "heading": "3. How We Use Your Information",
+        "text": "We will only use your personal data when the law allows us to. Most commonly, we will use your personal data to perform the contract we are about to enter into or have entered into with you, and where it is necessary for our legitimate interests."
+      }
+    ]
+  },
+  "termsPage": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: October 26, 2023",
+    "content": [
+      {
+        "heading": "1. Acceptance of Terms",
+        "text": "By accessing or using the Juglans.ai service, you agree to be bound by these Terms of Service. If you disagree with any part of the terms, then you may not access the service."
+      },
+      {
+        "heading": "2. No Investment Advice",
+        "text": "The information and tools provided by Juglans.ai are for informational purposes only and do not constitute financial or investment advice. You are solely responsible for your own investment decisions and any losses that may result."
+      },
+      {
+        "heading": "3. Intellectual Property",
+        "text": "The Service and its original content, features and functionality are and will remain the exclusive property of Juglans.ai and its licensors."
+      }
+    ]
+  }
+}

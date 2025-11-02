@@ -1,0 +1,65 @@
+/* app/components/Features.module.css */
+.featuresSection {
+  padding: 6rem 2rem;
+  background-color: var(--dark-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.heading h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  font-size: 1.125rem;
+  color: var(--light-gray);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-lime);
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: var(--primary-lime);
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--light-gray);
+  line-height: 1.6;
+}

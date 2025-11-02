@@ -36,10 +36,37 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 }
 
 
-// Validate ../../app/page.tsx
+// Validate ../../app/[lang]/page.tsx
 {
-  type __IsExpected<Specific extends AppPageConfig<"/">> = Specific
-  const handler = {} as typeof import("../../app/page.js")
+  type __IsExpected<Specific extends AppPageConfig<"/[lang]">> = Specific
+  const handler = {} as typeof import("../../app/[lang]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/[lang]/privacy-policy/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/[lang]/privacy-policy">> = Specific
+  const handler = {} as typeof import("../../app/[lang]/privacy-policy/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/[lang]/terms-of-service/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/[lang]/terms-of-service">> = Specific
+  const handler = {} as typeof import("../../app/[lang]/terms-of-service/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../app/[lang]/what-is-vibe-trading/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/[lang]/what-is-vibe-trading">> = Specific
+  const handler = {} as typeof import("../../app/[lang]/what-is-vibe-trading/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -51,10 +78,10 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
 
 
 
-// Validate ../../app/layout.tsx
+// Validate ../../app/[lang]/layout.tsx
 {
-  type __IsExpected<Specific extends LayoutConfig<"/">> = Specific
-  const handler = {} as typeof import("../../app/layout.js")
+  type __IsExpected<Specific extends LayoutConfig<"/[lang]">> = Specific
+  const handler = {} as typeof import("../../app/[lang]/layout.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check

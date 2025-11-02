@@ -1,0 +1,60 @@
+/* app/components/HowItWorks.module.css */
+.howItWorksSection {
+  padding: 6rem 2rem;
+  border-top: 1px solid var(--border-color);
+  background: radial-gradient(circle, rgba(191, 255, 0, 0.03) 0%, rgba(18, 18, 18, 0) 70%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.heading h2 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.subheading {
+  font-size: 1.125rem;
+  color: var(--light-gray);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.pillarCard {
+  text-align: center;
+  padding: 2rem;
+}
+
+.icon {
+  font-size: 3rem;
+  color: var(--primary-lime);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--light-gray);
+  line-height: 1.6;
+}

@@ -51,6 +51,7 @@ yarn.lock
 
 # Vite cache
 .vite
+.next
 .tsbuildinfo
 
 # ----------------------------------------------------------------
@@ -98,3 +99,4 @@ Thumbs.db
 ehthumbs.db
 ehthumbs_vista.db
 *.stackdump
+

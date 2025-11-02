@@ -1,0 +1,24 @@
+/* app/components/VibeHero.module.css */
+.heroSection {
+  padding: 8rem 2rem 6rem;
+  text-align: center;
+  background: radial-gradient(circle, rgba(191, 255, 0, 0.05) 0%, rgba(18, 18, 18, 0) 70%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--light-gray);
+  line-height: 1.7;
+}

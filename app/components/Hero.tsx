@@ -1,14 +1,21 @@
+// app/components/Hero.tsx
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import styles from './Hero.module.css';
 
-const Hero = () => {
-  const commands = [
-    "Find tech stocks hitting 52-week lows...",
-    "Compare NVDA and AMD's P/E ratios...",
-    "What's the market sentiment on crypto today?",
-    "Show me ESG funds with high returns...",
-  ];
+type HeroProps = {
+  t: {
+    badge: string;
+    title_line1: string;
+    title_line2: string;
+    subtitle: string;
+    cta: string;
+    terminalCommands: string[];
+  }
+}
+
+const Hero = ({ t }: HeroProps) => {
+  const commands = useMemo(() => t.terminalCommands, [t.terminalCommands]);
   const [index, setIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -23,7 +30,7 @@ const Hero = () => {
       }
 
       if (!isDeleting && displayedText === currentCommand) {
-        setTimeout(() => setIsDeleting(true), 2000); // Pause before deleting
+        setTimeout(() => setIsDeleting(true), 2000);
       } else if (isDeleting && displayedText === '') {
         setIsDeleting(false);
         setIndex((prevIndex) => (prevIndex + 1) % commands.length);
@@ -41,14 +48,14 @@ const Hero = () => {
       
       <div className={styles.content}>
         <div className={styles.badge}>
-          全球第一个 Vibe Trading App
+          {t.badge}
         </div>
         <h1 className={styles.mainHeading}>
-          未来交易<br />
-          <span className={styles.glowText}>开口即得</span>
+          {t.title_line1}<br />
+          <span className={styles.glowText}>{t.title_line2}</span>
         </h1>
         <p className={styles.subheading}>
-          Juglans，通过自然语言赋能你的投资决策。告别复杂图表，与你的专属AI交易员对话。
+          {t.subtitle}
         </p>
         
         <div className={styles.terminal}>
@@ -58,7 +65,7 @@ const Hero = () => {
         </div>
 
         <a href="https://app.juglans.ai" target="_blank" rel="noopener noreferrer" className={styles.heroCta}>
-          立即体验 →
+          {t.cta}
         </a>
       </div>
     </section>
