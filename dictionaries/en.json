@@ -148,5 +148,10 @@
         "text": "The Service and its original content, features and functionality are and will remain the exclusive property of Juglans.ai and its licensors."
       }
     ]
+  },
+  "notFoundPage": {
+    "title": "Page Not Found",
+    "message": "Oops! The page you are looking for does not exist. It might have been moved or deleted.",
+    "buttonText": "Go Back Home"
   }
 }

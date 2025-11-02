@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link'; // 引入 Link 组件
+import Link from 'next/link';
 import styles from './Header.module.css';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -31,37 +31,44 @@ const Header = ({ lang, t }: HeaderProps) => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        {/* Logo 区域被替换为可点击的 Link 组件 */}
+        {/* Logo (保持不变) */}
         <Link href={`/${lang}`} className={styles.logoContainer}>
           <Image src="/logo.svg" alt="Juglans Logo" width={40} height={40} />
           <span className={styles.logoText}>Juglans</span>
         </Link>
         
-        <nav className={styles.desktopNav}>
-          <a href={`/${lang}/what-is-vibe-trading`}>{t.nav.whatIsVibeTrading}</a>
-          <a href={`/${lang}/#features`}>{t.nav.products}</a>
-          <a href="#">{t.nav.company}</a>
-          <a href="#">{t.nav.learn}</a>
-          <a href="#">{t.nav.support}</a>
-        </nav>
+        {/* --- 这是修改过的部分 --- */}
+        {/* 新增一个 div 来包裹导航和操作按钮 */}
+        <div className={styles.navAndActions}>
+          <nav className={styles.desktopNav}>
+            <a href={`/${lang}/what-is-vibe-trading`}>{t.nav.whatIsVibeTrading}</a>
+            <a href={`/${lang}/#features`}>{t.nav.products}</a>
+            <a href="#">{t.nav.company}</a>
+            <a href="#">{t.nav.learn}</a>
+            <a href="#">{t.nav.support}</a>
+          </nav>
 
-        <div className={styles.actionsContainer}>
-          <LanguageSwitcher />
-          <a
-            href="https://app.juglans.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.ctaButton}
-          >
-            {t.launchApp}
-          </a>
+          <div className={styles.actionsContainer}>
+            <LanguageSwitcher />
+            <a
+              href="https://app.juglans.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaButton}
+            >
+              {t.launchApp}
+            </a>
+          </div>
         </div>
+        {/* --- 修改结束 --- */}
 
+        {/* 移动菜单按钮 (保持不变) */}
         <button className={styles.mobileMenuButton} onClick={toggleMenu}>
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
+      {/* 移动端菜单 (保持不变) */}
       {isOpen && (
         <div className={styles.mobileNav}>
           <a href={`/${lang}/what-is-vibe-trading`} onClick={toggleMenu}>{t.nav.whatIsVibeTrading}</a>

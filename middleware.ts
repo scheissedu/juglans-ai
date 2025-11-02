@@ -8,14 +8,12 @@ import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 
 function getLocale(request: NextRequest): string | undefined {
-  // Negotiator expects plain object so we need to transform headers
   const negotiatorHeaders: Record<string, string> = {}
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
 
   // @ts-ignore locales are readonly
   const locales: string[] = i18n.locales
 
-  // Use negotiator and intl-localematcher to get best locale
   let languages = new Negotiator({ headers: negotiatorHeaders }).languages(
     locales
   )
@@ -27,27 +25,16 @@ function getLocale(request: NextRequest): string | undefined {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
-
-  // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public`
-  if (
-    [
-      '/logo.svg',
-      // Your other files in `public`
-    ].includes(pathname)
-  )
-    return
-
-  // Check if there is any supported locale in the pathname
+  
+  // 检查路径中是否缺少语言环境
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   )
 
-  // Redirect if there is no locale
+  // 如果没有语言环境，则重定向
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request)
 
-    // e.g. incoming request is /products
-    // The new URL is now /en/products
     return NextResponse.redirect(
       new URL(
         `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
@@ -57,7 +44,11 @@ export function middleware(request: NextRequest) {
   }
 }
 
+// ==================== 修改在这里 ====================
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+  // 我们更新 matcher 来排除所有包含点的文件（即静态文件）
+  // 并继续排除 /api, /_next/static, /_next/image, 和 favicon.ico
+  matcher: [
+    '/((?!api|_next/static|_next/image|images|favicon.ico|.*\\..*).*)'
+  ],
 }

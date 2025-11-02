@@ -22,18 +22,26 @@
   align-items: center;
   gap: 0.75rem;
   z-index: 11;
-  cursor: pointer; /* 添加指针样式，提示用户可以点击 */
-  transition: transform 0.2s ease-in-out; /* 添加过渡效果 */
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
 .logoContainer:hover {
-  transform: scale(1.05); /* 添加悬停时的放大效果 */
+  transform: scale(1.05);
 }
 
 .logoText {
   font-size: 1.25rem;
   font-weight: 700;
 }
+
+/* --- 这是新增的样式 --- */
+.navAndActions {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* 控制导航链接和右侧按钮之间的间距 */
+}
+/* --- 新增结束 --- */
 
 .desktopNav {
   display: flex;
@@ -43,12 +51,10 @@
 .desktopNav a {
   color: var(--light-gray);
   font-weight: 500;
-  /* 👇 1. 更新 transition 属性 */
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .desktopNav a:hover {
-  /* 👇 2. 修改悬停效果 */
   color: var(--primary-lime);
   text-shadow: 0 0 8px var(--primary-lime);
 }
@@ -112,6 +118,12 @@
 
 /* --- Responsive Design --- */
 @media (max-width: 1024px) {
+  /* --- 这是新增的样式 --- */
+  .navAndActions {
+    display: none;
+  }
+  /* --- 新增结束 --- */
+  
   .desktopNav {
     display: none;
   }
@@ -144,11 +156,9 @@
   .mobileNav a:not(.mobileCtaButton) {
     font-size: 1.25rem;
     color: var(--light-gray);
-    /* 👇 3. 为移动端链接也添加 transition */
     transition: color 0.2s ease, text-shadow 0.2s ease;
   }
 
-  /* 👇 4. 为移动端链接也添加悬停效果 */
   .mobileNav a:not(.mobileCtaButton):hover {
     color: var(--primary-lime);
     text-shadow: 0 0 8px var(--primary-lime);
